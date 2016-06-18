@@ -15,5 +15,6 @@ C dilinde yazmaktır.
 
 Bu repoyu hazırlarken benimde öğrenme süreci içerisinde olduğum unutulmamalıdır.Eleştirilere
 sonuna kadar açığım https://www.facebook.com/umit.ozturk.374549 buradan ulaşabilirsiniz.
+
   Yeni başlayanlara faydalı olması dileğiyle.
 
