@@ -19,16 +19,16 @@ main(){
 	
 	int a[20],s,i,j,x;
 	/* Değerleri Kullanıcıdan al */
-	printf("How many numbers you entered.\n");scanf("%d",&s); 			/* Kaç sayı gireceğini kullanıcıdan aldım */
-	for(i=0;i<s;i++){													/* Değerleri indislere atadık */
+	printf("How many numbers you entered.\n");scanf("%d",&s); 	/* Kaç sayı gireceğini kullanıcıdan aldım */
+	for(i=0;i<s;i++){						/* Değerleri indislere atadık */
 		printf("Enter %d number:",i+1);
 		scanf("%d",&a[i]);
 		printf("\n");
 	}	/* Selection Sort Algoritmasının Başladığı Yer */
-			for(i=0;i<s;i++){			/* 1. indis seçilir ve iç içe fordan anlaşılacağı üzere geri kalan tüm indislerle */								
-				for(j=i+1;j<s;j++){		/* tek tek karşılaştırır.  */
-					if(a[i]>a[j]){										/* Eğer a[i] indisi a[j] indisinden büyük ise */
-						x=a[i];											/* klasik yer değiştirme algoritması yapar  */  
+			for(i=0;i<s;i++){	     /* 1. indis seçilir ve iç içe fordan anlaşılacağı üzere geri kalan tüm indislerle */
+				for(j=i+1;j<s;j++){  /* tek tek karşılaştırır.  */
+					if(a[i]>a[j]){			/* Eğer a[i] indisi a[j] indisinden büyük ise */
+						x=a[i];			/* klasik yer değiştirme algoritması yapar  */  
 						a[i]=a[j];
 						a[j]=x;
 					}
