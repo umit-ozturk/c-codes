@@ -1,19 +1,19 @@
 /*
  * ==========================================================================
  *                     Filename:     002-Insertion Sort.c
- *                     Description:  Insertion Sort - Sokma,Ekleme Sıralaması
+ *                     Description:  Insertion Sort - Sokma,Ekleme SÄ±ralamasÄ±
  *                     Created:      20.06.2016
  *
- *         Author:  Ümit Öztürk
+ *         Author:  Ãœmit Ã–ztÃ¼rk
  *
- *                      Karmaşıklık (Complicacy): Best    // n
+ *                      KarmaÅŸÄ±klÄ±k (Complicacy): Best    // n
  *												  Avarage // n^2
  *												  Worst   // n^2
  *         				
  *						Approach:Insertion
  *
  * 						Note:http://www.bilgisayarkavramlari.com/2008/08/09/hizli-siralama-algoritmasi-quick-sort-algorithm/
- *					    Bu dökümandanda faydalanılabilir Şadi Evren Şeker'e Teşekkürler.		
+ *					    Bu dÃ¶kÃ¼mandanda faydalanÄ±labilir Åadi Evren Åeker'e TeÅŸekkÃ¼rler.		
  * ==========================================================================
  */
 
@@ -21,23 +21,24 @@
 
 #include<stdio.h>
 #include<conio.h>
+#include<locale.h> // TÃ¼rkÃ§e karakter iÃ§indir.
 
 
 void insertionsort(int a[],int n){
 
-	int x,var,i; // x:swiping için kullanılan değişken  var:kullanılan değişken i:döngü değişkeni
+	int x,var,i; // x:swiping iÃ§in kullanÄ±lan deÄŸiÅŸken  var:kullanÄ±lan deÄŸiÅŸken i:dÃ¶ngÃ¼ deÄŸiÅŸkeni
 	
-	for(i=1; i <= n-1 ; i++){ // i=1 olduğunu hatırlayınız
+	for(i=1; i <= n-1 ; i++){ // i=1 olduÄŸunu hatÄ±rlayÄ±nÄ±z
 		var=i;
 			while (var > 0 && a[var] < a[var-1]){
-				/* Bu kod parçacığını artık aklımızda tutmalıyız klasik swiping işlemi */
-							// Türkçesi yer değiştirme algoritması
+				/* Bu kod parÃ§acÄ±ÄŸÄ±nÄ± artÄ±k aklÄ±mÄ±zda tutmalÄ±yÄ±z klasik swiping iÅŸlemi */
+							// TÃ¼rkÃ§esi yer deÄŸiÅŸtirme algoritmasÄ±
 				x=a[var];
 				a[var]=a[var-1];
 				a[var-1]=x;
-				 	var--; /* Değişleni azaltıyoruz mesela 6,4,3,5 arrayi elimizde olsun
-					 			2. indexteki 3 değerine gelince sadece 1. index ile kontrol edip
-								swiping yapmasın değeri 0. index ile de kontrol edip swiping yapsın diye   */
+				 	var--; /* DeÄŸiÅŸleni azaltÄ±yoruz mesela 6,4,3,5 arrayi elimizde olsun
+					 			2. indexteki 3 deÄŸerine gelince sadece 1. index ile kontrol edip
+								swiping yapmasÄ±n deÄŸeri 0. index ile de kontrol edip swiping yapsÄ±n diye   */
 			}
 	}
 
@@ -45,23 +46,23 @@ void insertionsort(int a[],int n){
 
 main(){
 	
-	int a[20],i,n;		// a: dizi n: alınacak sayı i:döngü değişkeni
+	int a[20],i,n;		// a: dizi n: alÄ±nacak sayÄ± i:dÃ¶ngÃ¼ deÄŸiÅŸkeni
 	
 	printf("How many numbers you entered.\n");scanf("%d",&n);
 	
-		for(i=0;i<n;i++){ /* Arrayi belleğe aldık */
+		for(i=0;i<n;i++){ /* Arrayi belleÄŸe aldÄ±k */
 			printf("Enter %d number: ",i+1);
 			scanf("%d",&a[i]);
 			printf("\n");
 		}
-	//Fonksiyona diziyi ve uzunluk bilgisini gönderiyoruz.
-	insertionsort(a,n); // 0 değil 1 mesela 5,1,2,6,8 gibi bir dizide
-							// 5 | 1,2,6,8 gibi olacaktır yani 5 zaten sıralanmış
-							// sayılacaktır bu yüzden 0. indexten başlamaz.
+	//Fonksiyona diziyi ve uzunluk bilgisini gÃ¶nderiyoruz.
+	insertionsort(a,n); // 0 deÄŸil 1 mesela 5,1,2,6,8 gibi bir dizide
+							// 5 | 1,2,6,8 gibi olacaktÄ±r yani 5 zaten sÄ±ralanmÄ±ÅŸ
+							// sayÄ±lacaktÄ±r bu yÃ¼zden 0. indexten baÅŸlamaz.
 /*-----------------------------------------------------------------------------------*/	
 	printf("\nAfter sorting: ");
 	
-		for(i=0;i<n;i++) printf(" %d ",a[i]); // Sıralanmış arrayi yazdırıyoruz.
+		for(i=0;i<n;i++) printf(" %d ",a[i]); // SÄ±ralanmÄ±ÅŸ arrayi yazdÄ±rÄ±yoruz.
 	
 	
 	getch();
