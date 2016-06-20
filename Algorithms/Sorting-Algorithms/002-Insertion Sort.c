@@ -7,8 +7,8 @@
  *         Author:  Ümit Öztürk
  *
  *                      Karmaşıklık (Complicacy): Best    // n
- *												  Avarage // n^2
- *												  Worst   // n^2
+ *						  Avarage // n^2
+ *						  Worst   // n^2
  *         				
  *						Approach:Insertion
  *
@@ -21,7 +21,7 @@
 
 #include<stdio.h>
 #include<conio.h>
-#include<locale.h> // Türkçe karakter içindir.
+
 
 
 void insertionsort(int a[],int n){
