@@ -29,7 +29,7 @@ main(){
 				for(j=i+1;j<s;j++){  /* tek tek karşılaştırır.  */
 					if(a[i]>a[j]){			/* Eğer a[i] indisi a[j] indisinden büyük ise */
 						x=a[i];			/* klasik yer değiştirme algoritması yapar  */  
-						a[i]=a[j];
+						a[i]=a[j]; 
 						a[j]=x;
 					}
 				}
